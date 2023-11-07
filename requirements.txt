@@ -9,3 +9,4 @@ django-filter
 python-dotenv
 flake8
 django-allauth
+django-debug-toolbar

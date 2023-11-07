@@ -15,8 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+import debug_toolbar
+
+from backend_api.views import HomeView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include('backend_api.urls', namespace='backend_api')),
+    path('accounts/', include('allauth.urls')),
+    path('users/', include('backend_api.urls', namespace="users")),
+    path('__debug__/', include("debug_toolbar.urls")),
+    path('', HomeView.as_view(), name='home'),
 ]

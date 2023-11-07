@@ -9,8 +9,9 @@ from django.core.exceptions import ValidationError
 from django.core.validators import URLValidator
 from django.db import IntegrityError
 from django.db.models import Q, Sum, F
-from django.http import JsonResponse, QueryDict
+from django.http import JsonResponse, QueryDict, HttpResponse
 from django.shortcuts import render, redirect
+from django.views.generic import TemplateView
 from django_filters.rest_framework import DjangoFilterBackend
 from requests import get
 from rest_framework.authtoken.models import Token
@@ -72,3 +73,7 @@ class RegisterAccount(APIView):
 #    "company": "asdads",
 #    "position": "345345",
 # }
+
+
+class HomeView(TemplateView):
+    template_name = 'base.html'

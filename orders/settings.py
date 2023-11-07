@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'debug_toolbar',
 
     'backend_api.apps.BackendApiConfig',
 
@@ -48,9 +49,9 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-#     'allauth.socialaccount.providers.google',
-#     'allauth.socialaccount.providers.facebook',
-#
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.facebook',
+
 ]
 
 
@@ -63,6 +64,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'allauth.account.middleware.AccountMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'orders.urls'

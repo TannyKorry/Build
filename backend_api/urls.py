@@ -7,6 +7,7 @@ from backend_api.views import RegisterAccount
 app_name = 'backend_api'
 urlpatterns = [
     path('user/register', RegisterAccount.as_view(), name='user-register'),
+
 #     path('user/register/confirm', ConfirmAccount.as_view(), name='user-register-confirm'),
 #     path('user/details', AccountDetails.as_view(), name='user-details'),
 #     path('user/contact', ContactView.as_view(), name='user-contact'),
