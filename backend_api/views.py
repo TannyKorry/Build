@@ -69,6 +69,6 @@ class RegisterAccount(APIView):
 #    "last_name": "Искаков",
 #    "email": "a.iskakov1989@gmail.com",
 #    "password": "qwer1234A",
-#    "company": "каков",
-#    "position": "Искак",
+#    "company": "asdads",
+#    "position": "345345",
 # }
