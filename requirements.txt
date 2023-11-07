@@ -1,0 +1,11 @@
+django
+djangorestframework
+django-rest-passwordreset
+psycopg2-binary
+pyyaml
+ujson
+requests
+django-filter
+python-dotenv
+flake8
+django-allauth
