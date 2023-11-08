@@ -21,9 +21,9 @@ from backend_api.views import HomeView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/', include('backend_api.urls', namespace='backend_api')),
-    path('accounts/', include('allauth.urls')),
-    path('users/', include('backend_api.urls', namespace="users")),
-    path('__debug__/', include("debug_toolbar.urls")),
     path('', HomeView.as_view(), name='home'),
+    path('accounts/', include('backend_api.urls', namespace='backend_api')),
+    path('accounts/', include('allauth.urls')),
+    path('__debug__/', include("debug_toolbar.urls")),
+
 ]

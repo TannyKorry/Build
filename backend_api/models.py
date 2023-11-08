@@ -89,7 +89,7 @@ class User(AbstractUser):
         ),
     )
     type = models.CharField(verbose_name='Тип пользователя', choices=USER_TYPE_CHOICES, max_length=10,
-                            default='покупатель')
+                            default='Покупатель')
 
     def __str__(self):
         return f'{self.type}/{self.is_active}: {self.first_name} {self.last_name}'
